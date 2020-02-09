@@ -1,5 +1,29 @@
-.calculadora{
-    display: flex;
-    align-self: center;
-    padding: 10em;
+body{
+    background-color: rgb(83, 83, 83);
 }
+
+
+
+.container{
+    margin-top: 90px;
+    background-color: rgb(221, 221, 221);
+    padding: 30px;
+    width: 250px;
+    height: 300px;
+    
+}
+
+h1{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.num {
+    margin: 2px; 
+}
+
+
+#visor{
+ margin-bottom: 15px;
+}
+

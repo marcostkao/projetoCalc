@@ -1,57 +1,70 @@
-  
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  teste atualizaçã0
-    <div class="calculadora  col-lg-4">
-        <div>
-            <div>
-                <input id="visor" type="text">
-            </div>
-            <div class="botao-estilo" >
-                <button id="sete" type="button" class="btn btn-info">7</button>
-                <button id="oito" type="button" class="btn btn-info">8</button>
-                <button id="nove" type="button" class="btn btn-info">9</button>
-                <button id="multi" type="button" class="btn btn-info">x</button>
-            </div>
+
+    <h1>Calculadora JS</h1>
+
+    <div class="borda">
+        <div class="container rounded border border-warning">
+        
+
             <div >
-                <button id="quatro" type="button" class="btn btn-info">4</button>
-                <button id="cinco" type="button" class="btn btn-info">5</button> 
-                <button id="seis" type="button" class="btn btn-info">6</button>
-                <button id="subtracao" type="button" class="btn btn-info">-</button>
+                <form action="" name="calcform" method="POST" >
+                    <input class="form-control input-lg" type="text" name="visor" id="visor">
+        
+                </form>
+                <div id="calc">
+                    <button class="num btn btn-secondary" value="ac" onclick="calcLimpar()" >AC</button>
+                    <button class="num btn btn-secondary" value="ce" onclick="calcLimpar()" >CE</button>
+                    <button class="num btn btn-secondary" value="%" onclick="calcNum()">%</button>
+                    <button class="oper btn btn-secondary" value="/" onclick="calcParse('dividir')">/</button>
+                </div>
+                <div >
+                    <button  class="num btn btn-secondary" value="7" onclick="calcNum(7)">7</button>
+                    <button  class="num btn btn-secondary" value="8" onclick="calcNum(8)">8</button>
+                    <button  class="num btn btn-secondary" value="9" onclick="calcNum(9)">9</button>
+                    <button  id="btn-multiplicar" class="oper btn btn-secondary" value="*" onclick="calcParse('multiplicar')">x</button>
+                </div>
+                <div>
+                    <button  class="num btn btn-secondary" value="4" onclick="calcNum(4)">4</button>
+                    <button  class="num btn btn-secondary" value="5" onclick="calcNum(5)">5</button>
+                    <button  class="num btn btn-secondary" value="6" onclick="calcNum(6)">6</button>
+                    <button  id="btn-subtrair" class="oper btn btn-secondary"  value="-" onclick="calcParse('subtrair')">-</button>
+                </div>
+                <div>
+                    <button class="num btn btn-secondary" value="1" onclick="calcNum(1)">1</button>
+                    <button class="num btn btn-secondary" value="2" onclick="calcNum(2)">2</button>
+                    <button class="num btn btn-secondary" value="3" onclick="calcNum(3)">3</button>
+                    <button id="btn-somar" class="oper btn btn-secondary" value="+" onclick="calcParse('somar')">+</button>
+                </div>
+                <div>
+                    <button class="num btn btn-secondary" value="0" onclick="calcNum(0)">0</button>
+                    <button class="num btn btn-secondary" value="." onclick="calcNum()">.</button>
+                    <button class="oper btn btn-secondary" value="=" onclick="calcParse('resultado')">=</button>
+                </div>
             </div>
-            <div>
-                <button id="um" type="button" class="btn btn-info">1</button>
-                <button id="dois" type="button" class="btn btn-info">2</button>
-                <button id="tres" type="button" class="btn btn-info">3</button>
-                <button id="soma" type="button" class="btn btn-info">+</button>
-            </div>
-            <div>
-                <button id="zero0" type="button" class="btn btn-info">00</button>
-                <button id="zero" type="button" class="btn btn-info">0</button>
-                <button id="ponto" type="button" class="btn btn-info">.</button>
-                <button id="igual" type="button" class="btn btn-success">=</button>
-            </div>
-           
             
+    
+    
+    
         </div>
+
+
     </div>
-
-
-
-
-
-
-
+    
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
